@@ -277,3 +277,80 @@ h1,h2,h3,h4,h5,h6{font-weight:800;color:var(--primary);letter-spacing:-.01em;lin
 .toast{position:fixed;bottom:24px;right:24px;background:var(--primary);color:#fff;padding:16px 20px;border-radius:8px;box-shadow:0 12px 24px rgba(0,0,0,.2);z-index:100;opacity:0;transform:translateY(20px);transition:all .3s;max-width:360px}
 .toast.show{opacity:1;transform:translateY(0)}
 .toast.error{background:#c62828}
+
+/* SERVICES GRID ONLY */
+.services-grid .card{
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 36px;
+}
+
+/* DARK OVERLAY */
+.services-grid .card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(255,255,255,0.95) 15%,
+    rgba(255,255,255,0.75) 45%,
+    rgba(255,255,255,0.20) 100%
+  );
+
+  z-index:1;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.services-grid .card *{
+  position:relative;
+  z-index:2;
+}
+
+/* BACKGROUNDS */
+
+.services-grid .card:nth-child(1){
+  background-image:url("../images/it.jpg");
+}
+
+.services-grid .card:nth-child(2){
+  background-image:url("../images/network.png");
+}
+
+.services-grid .card:nth-child(3){
+  background-image:url("../images/windows.png");
+}
+
+.services-grid .card:nth-child(4){
+  background-image:url("../images/windows2.png");
+}
+
+.services-grid .card:nth-child(5){
+  background-image:url("../images/virus.png");
+}
+
+.services-grid .card:nth-child(6){
+  background-image:url("../images/pcrepair.png");
+}
+
+.services-grid .card:nth-child(7){
+  background-image:url("../images/malware1.png");
+}
+
+.services-grid .card:nth-child(8){
+  background-image:url("../images/windows3.png");
+}
+
+.services-grid .card:nth-child(9){
+  background-image:url("../images/mac.png");
+}
