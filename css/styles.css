@@ -1,3 +1,4 @@
+/* ITSS-inspired static site styles */
 :root{
   --primary:#0f172a;        /* deep slate */
   --primary-2:#1e293b;
@@ -55,8 +56,13 @@ h1,h2,h3,h4,h5,h6{font-weight:800;color:var(--primary);letter-spacing:-.01em;lin
 .glass-dark{background: linear-gradient(135deg,rgba(15,23,42,0.7),rgba(15,23,42,0.4)); /* lower opacity */backdrop-filter: blur(28px);-webkit-backdrop-filter: blur(20px);border-radius: 24px;border: 1px solid rgba(255,255,255,0.08);box-shadow: 0 20px 60px rgba(0,0,0,0.25),inset 0 1px 0 rgba(255,255,255,0.05);}/* Header */
 .glass-hero{background: rgba(15,23,42,0.12);backdrop-filter: blur(28px);-webkit-backdrop-filter: blur(28px);border-radius:0;box-shadow: 0 30px 80px rgba(0,0,0,0.2);}
 .site-header{position:sticky;top:0;z-index:50;background: rgba(255,255,255,0.7);backdrop-filter: blur(12px);border-bottom:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,0.05);}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1280px;margin:0 auto}
-.logo img{height:48px;width:auto}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1280px;margin:0 auto; position: relative;}
+.logo img{height:48px;width:auto;}
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .nav{display:flex;gap:32px}
 .nav a{position:relative; font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--primary);transition:color .2s}
 .nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);transition:.3s;}
